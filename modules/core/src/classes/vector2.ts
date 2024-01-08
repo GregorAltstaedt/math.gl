@@ -72,8 +72,8 @@ export class Vector2 extends Vector {
    * @returns
    */
   horizontalAngle(rad: number): number {
-    let x = this[0] * cos(rad) - this[1] * sin(rad);
-    let y = this[0] * sin(rad) + this[1] * cos(rad);
+    let x = this[0] * Math.cos(rad) - this[1] * Math.sin(rad);
+    let y = this[0] * Math.sin(rad) + this[1] * Math.cos(rad);
     return { x, y }
   }
 
