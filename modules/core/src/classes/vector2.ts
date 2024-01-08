@@ -68,13 +68,23 @@ export class Vector2 extends Vector {
   }
 
   /**
+   * Returns a new rotated vector. (Uses radians, turns clockwise)
+   * @returns
+   */
+  horizontalAngle(rad: number): number {
+    let x = this[0] * cos(rad) - this[1] * sin(rad);
+    let y = this[0] * sin(rad) + this[1] * cos(rad);
+    return { x, y }
+  }
+
+  /**
    * Returns angle from x axis
    * @returns
    */
   horizontalAngle(): number {
     return Math.atan2(this.y, this.x);
   }
-
+  
   /**
    * Returns angle from y axis
    * @returns
